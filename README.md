@@ -1,9 +1,10 @@
-# trab-perso2-2022b-AlejandroBrites
-trab-perso2-2022b-AlejandroBrites created by GitHub Classroom
+# Trabalho Perso. 2
+
+Aluno: Alejandro Velasco Teixeira Brites
 
 # RECURSÃO EM PROLOG
 
-  A recursão ocorre na programação quando uma função chama a si mesma. Normalmente esse tipo de recurso é usado para resolver problemas grandes, dividindo os mesmos em problemas menores de mais fácil resolução, facilitando assim a resolução final do problema.
+A recursão ocorre na programação quando uma função chama a si mesma. Normalmente esse tipo de recurso é usado para resolver problemas grandes, dividindo os mesmos em problemas menores de mais fácil resolução, facilitando assim a resolução final do problema.
 
 Existem muitas linguagens de programação que utilizam recursão e Prolog também é uma delas. Vejamos alguns exemplos de aplicações de recursão em Prolog e como eles são feitos.
 
@@ -117,6 +118,6 @@ Com isso, foi mostrado o uso básico de recursão em Prolog, os conceitos básic
 
 # Link do repositório no Replit
 
-https://replit.com/@AlejandroBrites/Trabalho-Individual-02-Paradigmas#main.pl
+https://replit.com/@AlejandroBrites/Trabalho-Perso-02-Paradigmas#main.pl
 
 Para executar o programa digite no terminal "swipl main.pl" para abrir o programa "main.pl".
