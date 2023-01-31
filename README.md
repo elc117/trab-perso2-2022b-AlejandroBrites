@@ -115,4 +115,8 @@ Em outras palavras, o código irá verificar se o elemento não se encontra na p
 
 Com isso, foi mostrado o uso básico de recursão em Prolog, os conceitos básicos de Lista em Prolog e o uso de recursão com Listas. Existem diversas outras aplicações para a recursão.
 
-# Link do projeto no Replit
+# Link do repositório no Replit
+
+https://replit.com/@AlejandroBrites/Trabalho-Individual-02-Paradigmas#main.pl
+
+Para executar o programa digite no terminal "swipl main.pl" para abrir o programa "main.pl".
