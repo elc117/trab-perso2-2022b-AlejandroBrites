@@ -21,7 +21,9 @@ descendentev1(X,Y) :- genitor(Y,W), genitor(W,Z), genitor(Z,X).   %3
 O código prolog acima detecta descendência direta, de até 3 gerações de diferença, em uma árvore genealógica.
 
 A linha %1 detecta o parentesco de 1 geração de distância.
+
 A linha %2 detecta o parentesco de 2 gerações de distância.
+
 A linha %3 detecta o parentesco de 3 gerações de distância.
 
 Porém para cada geração que a árvore aumente será necessário modificar o código, pois ele tem uma linha de código para cada geração. Para resolver esse problema iremos utilizar a recursão para fazer o código não depender de um número de gerações fixo.
@@ -35,7 +37,7 @@ descendentev2(X,Y) :- genitor(Y,X).
 descendentev2(X,Y) :- genitor(Y,Z),descendente(X,Z).                %4
 ```
 
-Com o uso de recursão o código acima irá resolver o problema de detecção de descendência independente do número de gerações pois o linha de código (%4) irá chamar a função “descendentev2” recursivamente 1 vez para cada geração, desse modo detectando qualquer descendência direta.
+Com o uso de recursão o código acima irá resolver o problema de detecção de descendência independente do número de gerações, pois o linha de código %4 irá chamar a predicado “descendentev2” recursivamente 1 vez para cada geração, desse modo detectando qualquer descendência direta.
 
 
 Outro problema clássico que pode ser resolvido por recursão é o cálculo do fatorial.
@@ -51,7 +53,7 @@ fatorial(N,F) :- N > 0,
                  F is N * F1.
 ```
 
-O código em Prolog acima irá calcular o fatorial de qualquer número, pois a função “fatorial(N,F)” sempre irá chamar ela mesma de maneira recursiva passando um parâmetro cada vez menor até chegar no valor zero onde será resolvida pela função “fatorial(0,1)”. Quanto maior for o número do qual o fatorial for calculado, maior será o número de chamadas recursivas que o programa irá executar.
+O código em Prolog acima irá calcular o fatorial de qualquer número, pois o predicado “fatorial(N,F)” sempre irá chamar ele mesmo de maneira recursiva passando um parâmetro cada vez menor até chegar no valor zero onde será resolvida pelo predicado “fatorial(0,1)”. Quanto maior for o número do qual o fatorial for calculado, maior será o número de chamadas recursivas que o programa irá executar.
 
 # LISTAS EM PROLOG
 
@@ -69,6 +71,18 @@ Em Prolog existe um recurso em lista chamado Pipe ele é representado pelo símb
 
 Cabeça (Head): Corresponde ao primeiro elemento da lista.
 Cauda (Tail): corresponde aos demais elementos da lista com exceção da Cabeça.
+
+Exemplo:
+
+```
+[1, 2, 3, 4, 5, 6]
+
+[X | Y].
+
+X = [1].               X é a Cabeça da lista.
+
+Y = [2, 3, 4, 5, 6].   Y é a Cauda da lista.   
+```
 
 Vamos começar com uma aplicação simples.
 
@@ -93,13 +107,14 @@ Vamos ver outro exemplo de aplicação com listas.
 pertencev1(X, [ X | _ ]).                             %1
 pertencev1(X, [ _ | [ X | _ ] ]).                     %2
 pertencev1(X, [ _ | [ _ | [ X | _ ] ] ]).             %3
-pertencev1(X, [ _ | [ _ | [ _ | [ X | _ ] ] ] ]).     %4
 ```
 
 O código acima detecta se um elemento X pertence a uma lista Y (de no máximo 3 elementos).
 
 A linha %1 detecta se o elemento está na primeira posição.
+
 A linha %2 detecta se o elemento está na segunda posição.
+
 A linha %3 detecta se o elemento está na terceira posição.
 
 Assim como no exemplo da árvore genealógica, para cada unidade de tamanho que a lista aumente será necessário adicionar uma linha nesse detector.
@@ -110,11 +125,11 @@ pertencev2(X,[_|T]) :- pertence(X,T).
 ```
 
 Por outro lado, esse código detecta se um elemento X pertence a uma lista Y, de qualquer tamanho.
-Isso se deve ao fato deste código chamar recursivamente a função “pertencev2”, enviando como parâmetro a Cauda(Tail) da lista que está sendo analisada de maneira recursiva.
+Isso se deve ao fato deste código chamar recursivamente o prdicado “pertencev2”, enviando como parâmetro a Cauda(Tail) da lista que está sendo analisada de maneira recursiva.
 
-Em outras palavras, o código irá verificar se o elemento não se encontra na primeira posição, caso não se encontre irá chamar a função pertence usando como parâmetro a Cauda da lista original, ou seja, irá eliminar apenas o primeiro elemento que já foi verificado anteriormente.
+Em outras palavras, o código irá verificar se o elemento não se encontra na primeira posição, caso não se encontre irá chamar o predicado "pertencev2" usando como parâmetro a Cauda da lista original, ou seja, irá eliminar apenas o primeiro elemento que já foi verificado anteriormente.
 
-Com isso, foi mostrado o uso básico de recursão em Prolog, os conceitos básicos de Lista em Prolog e o uso de recursão com Listas. Existem diversas outras aplicações para a recursão.
+Com isso, foi mostrado o uso básico de recursão em Prolog, os conceitos básicos de Listas em Prolog e o uso de Recursão com Listas. Além do que foi mostrado acima existem diversas outras aplicações em que a recursão pode ser aplicada.
 
 # Link do repositório no Replit
 
