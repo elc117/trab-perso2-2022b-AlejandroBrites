@@ -114,3 +114,5 @@ Isso se deve ao fato deste código chamar recursivamente a função “pertencev
 Em outras palavras, o código irá verificar se o elemento não se encontra na primeira posição, caso não se encontre irá chamar a função pertence usando como parâmetro a Cauda da lista original, ou seja, irá eliminar apenas o primeiro elemento que já foi verificado anteriormente.
 
 Com isso, foi mostrado o uso básico de recursão em Prolog, os conceitos básicos de Lista em Prolog e o uso de recursão com Listas. Existem diversas outras aplicações para a recursão.
+
+# Link do projeto no Replit
