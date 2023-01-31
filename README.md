@@ -136,3 +136,11 @@ Com isso, foi mostrado o uso básico de recursão em Prolog, os conceitos básic
 https://replit.com/@AlejandroBrites/Trabalho-Perso-02-Paradigmas#main.pl
 
 Para executar o programa digite no terminal "swipl main.pl" para abrir o programa "main.pl".
+
+# Referências
+
+https://rodrigorgs.github.io/aulas/mata56/aula03-prolog-recursao
+
+https://rodrigorgs.github.io/aulas/mata56/aula06-prolog-listas
+
+https://www.youtube.com/watch?v=1KfhlylEcLI
