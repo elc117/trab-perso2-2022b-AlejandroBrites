@@ -9,9 +9,9 @@ A recursão ocorre na programação quando uma função chama a si mesma. Normal
 Existem muitas linguagens de programação que utilizam recursão e Prolog também é uma delas. Vejamos alguns exemplos de aplicações de recursão em Prolog e como eles são feitos.
 
 ```Prolog
-genitor(Elizabeth,Charles).
-genitor(Charles,William).
-genitor(William,George).
+genitor(elizabeth,charles).
+genitor(charles,william).
+genitor(william,george).
 
 descendentev1(X,Y) :- genitor(Y,X).                               %1
 descendentev1(X,Y) :- genitor(Y,Z), genitor(Z,X).                 %2
@@ -27,9 +27,9 @@ A linha %3 detecta o parentesco de 3 gerações de distância.
 Porém para cada geração que a árvore aumente será necessário modificar o código, pois ele tem uma linha de código para cada geração. Para resolver esse problema iremos utilizar a recursão para fazer o código não depender de um número de gerações fixo.
 
 ```Prolog
-genitor(Elizabeth,Charles).
-genitor(Charles,William).
-genitor(William,George).
+genitor(elizabeth,charles).
+genitor(charles,william).
+genitor(william,george).
 
 descendentev2(X,Y) :- genitor(Y,X).
 descendentev2(X,Y) :- genitor(Y,Z),descendente(X,Z).                %4
