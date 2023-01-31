@@ -1,6 +1,6 @@
 # Trabalho Perso. 2
 
-Aluno: Alejandro Velasco Teixeira Brites
+Aluno: Alejandro Velasco Teixeira Brites.
 
 # RECURSÃO EM PROLOG
 
