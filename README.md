@@ -34,7 +34,7 @@ genitor(charles,william).
 genitor(william,george).
 
 descendentev2(X,Y) :- genitor(Y,X).
-descendentev2(X,Y) :- genitor(Y,Z),descendente(X,Z).                %4
+descendentev2(X,Y) :- genitor(Y,Z),descendentev2(X,Z).                %4
 ```
 
 Com o uso de recursão o código acima irá resolver o problema de detecção de descendência independente do número de gerações, pois o linha de código %4 irá chamar a predicado “descendentev2” recursivamente 1 vez para cada geração, desse modo detectando qualquer descendência direta.
@@ -121,7 +121,7 @@ Assim como no exemplo da árvore genealógica, para cada unidade de tamanho que 
 
 ```Prolog
 pertencev2(X,[X|_]).
-pertencev2(X,[_|T]) :- pertence(X,T).
+pertencev2(X,[_|T]) :- pertencev2(X,T).
 ```
 
 Por outro lado, esse código detecta se um elemento X pertence a uma lista Y, de qualquer tamanho.
